@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏎️ Car Racing - Genetic Algorithm</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.0/dist/tf.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a2e;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 100;
+        }
+
+        h2 {
+            margin: 0 0 10px 0;
+            color: #4ecdc4;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .stat {
+            color: #feca57;
+            font-weight: bold;
+        }
+
+        button {
+            background: #ff6b6b;
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ee5253;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">
+        <h2>🏎️ Car Racing</h2>
+        <p>Generation: <span id="gen" class="stat">0</span></p>
+        <p>Alive: <span id="alive" class="stat">0</span></p>
+        <p>Best: <span id="best" class="stat">0</span></p>
+        <p>🏆 Tours: <span id="laps" class="stat">0</span></p>
+        <hr>
+        <button onclick="addObstacle()">➕ Obstacle</button>
+        <button onclick="clearObstacles()">🗑️ Clear</button>
+        <p>Obstacles: <span id="obs" class="stat">0</span></p>
+    </div>
+
+    <script src="js/nn.js"></script>
+    <script src="js/ga.js"></script>
+    <script src="js/ray.js"></script>
+    <script src="js/boundary.js"></script>
+    <script src="js/vehicle.js"></script>
+    <script src="js/sketch.js"></script>
+</body>
+
+</html>
